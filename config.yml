@@ -1,0 +1,61 @@
+scenarios:
+  - engine: ws
+    flow:
+      - loop:
+        - function: "createMessage"
+        - send: "{{ message }}"
+        count: 50
+config:
+  processor: "./processor.js"
+  environments:
+    prod:
+      target: ws://127.0.0.1:7000
+      phases:
+        - duration: 10
+          arrivalRate: 100
+    local:
+      target: ws://127.0.0.1:8008
+      phases:
+        - duration: 10
+          arrivalRate: 100
+  variables:
+    # privateKey: "001122...eeffcc" # comment to auto-generate random private keys
+    kind: # use range 20000-29999 only
+      - "29990" 
+      - "29991"
+      - "29992"
+      - "29993"
+      - "29994"
+      - "29995"
+      - "29996"
+      - "29997"
+      - "29998"
+      - "29999"
+    tags:
+      - '[["client", "nostrillery"]]'
+    content:
+      - "Performance test 01"
+      - "Performance test 02"
+      - "Performance test 03"
+      - "Performance test 04"
+      - "Performance test 05"
+      - "Performance test 06"
+      - "Performance test 07"
+      - "Performance test 08"
+      - "Performance test 09"
+      - "Performance test 10"
+      - "Performance test 11"
+      - "Performance test 12"
+      - "Performance test 13"
+      - "Performance test 14"
+      - "Performance test 15"
+      - "Performance test 16"
+      - "Performance test 17"
+      - "Performance test 18"
+      - "Performance test 19"
+      - "Performance test 20"
+      - "Performance test 21"
+      - "Performance test 22"
+      - "Performance test 23"
+      - "Performance test 24"
+      - "Performance test 25"

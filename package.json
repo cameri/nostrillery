@@ -1,0 +1,15 @@
+{
+  "name": "nostrillery",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test:local": "npx artillery run -e local config.yml",
+    "test:prod": "npx artillery run -e prod config.yml"
+  },
+  "author": "Ricardo Arturo Cabral Mejía",
+  "license": "MIT",
+  "dependencies": {
+    "@noble/secp256k1": "^1.6.3",
+    "artillery": "^2.0.0-23"
+  }
+}
