@@ -9,7 +9,6 @@
   "author": "Ricardo Arturo Cabral Mejía",
   "license": "MIT",
   "dependencies": {
-    "@noble/secp256k1": "^1.6.3",
-    "artillery": "^2.0.0-23"
+    "@noble/secp256k1": "^1.6.3"
   }
 }
